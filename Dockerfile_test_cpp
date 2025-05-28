@@ -1,0 +1,26 @@
+# Use a base image with necessary tools
+FROM ubuntu:latest
+
+# Install required packages
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    g++
+
+RUN mkdir /app
+# Set working directory
+WORKDIR /app
+
+# Copy source code
+COPY test.cpp /app
+
+# Create build directory
+
+# Change to build directory
+# WORKDIR /app/build
+
+# Generate makefiles with CMake
+RUN g++ test.cpp -o test.exe
+
+# Command to run when the container starts
+
+ENTRYPOINT ["/app/test.exe"]

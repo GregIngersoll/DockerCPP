@@ -3,7 +3,7 @@ Repository for Docker-based C++ Project
 
 Prerequisites:
 1. Alloy installed locally.
-2, Docker installed locally.
+2. Docker installed locally.
 3. g++ installed locally.
 
 Prometheus, grafana, and loki will all be within docker containers.
